@@ -4,8 +4,7 @@
 
 # Snowflake Extension
 
-Initial release supports applying formatted sql changesets.  It might support other types of refactorings but they haven't been tested. 
-Some of the interesting overrides / extensions are documented below.
+Initial release supports applying formatted sql changesets.  It might support other types of refactorings but they haven't been tested.  Some of the interesting overrides / extensions are documented below.
 
 ## Database
 
@@ -25,7 +24,7 @@ table names, resulting in queries of the form:
     show tables like 'DATABASECHANGELOG' in schema "sample_db"."sample_schema"
 
 This results in the `DATABASECHANGELOG` table not being found, even after it has been created.  Since Snowflake stores
- catalog and schema names in upper case, the getJdbcCatalogName returns an upper case value. 
+ catalog and schema names in upper case, the getJdbcCatalogName returns an upper case value.
 
 ### getJdbcSchemaName
 
